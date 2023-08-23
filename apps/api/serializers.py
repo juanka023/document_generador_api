@@ -5,4 +5,4 @@ from .models import DocumentData
 class DocumentDataSerializer(serializers.ModelSerializer):
     class Meta:
         model = DocumentData
-        fields = '__all__'
+        fields = ('nombre', 'placa', 'entidad')
