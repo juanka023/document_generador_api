@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.template import Context, Template
 from rest_framework.views import APIView
 
+
 class DocumentGenerationView(APIView):
 
     def generate_text_from_template(self, context):
@@ -18,8 +19,8 @@ class DocumentGenerationView(APIView):
     def post(self, request):
         data = request.data
         input_file = data.get('input_file', None)
-        
-        generated_text = ""        
+        context = {}
+        generated_text = ""
 
         if input_file:
             if input_file.content_type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
@@ -28,8 +29,7 @@ class DocumentGenerationView(APIView):
 
                 for paragraph in docx_template.paragraphs:
                     cont_text += paragraph.text + "\n"
-
-                context = {}
+                    
                 for line in cont_text.splitlines():
                     parts = line.split(':', 1)
                     if len(parts) == 2:
@@ -39,7 +39,6 @@ class DocumentGenerationView(APIView):
                 generated_text = self.generate_text_from_template(context)
             else:
                 content = input_file.read().decode('utf-8')
-                context = {}
                 for line in content.splitlines():
                     key, value = line.split(':', 1)
                     context[key.strip()] = value.strip()
