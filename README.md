@@ -56,7 +56,7 @@ Send a POST request to the `api/v1/generate/` endpoint with JSON data:
 "placa": "1234",
 "entidad": 123456
 }
-
+```
 ### Using TXT Input
 
 Upload a .txt file using the input_file field in the POST request with the following format:
