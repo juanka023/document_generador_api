@@ -13,16 +13,19 @@ The Document Generation API is a tool designed to generate text documents in dif
 To use the Document Generation API locally, follow these steps:
 
 1. Clone the repository:
+```
 git clone https://github.com/yourusername/document-generation-api.git
-
+```
 
 2. Navigate to the project directory:
+```
 cd document-generation-api
-
+```
 
 3. Create a virtual environment (recommended):
+```
 python3 -m venv venv
-
+```
 
 4. Activate the virtual environment:
 - On macOS and Linux:
@@ -35,12 +38,14 @@ python3 -m venv venv
 ```
 
 5. Install the project dependencies:
+```
 pip install -r requirements.txt
-
+```
 
 6. Start the local development server:
+```
 python manage.py runserver
-
+```
 
 7. The API should now be accessible at http://localhost:8000.
 
@@ -57,21 +62,23 @@ Send a POST request to the `api/v1/generate/` endpoint with JSON data:
 "entidad": 123456
 }
 ```
+
 ### Using TXT Input
 
 Upload a .txt file using the input_file field in the POST request with the following format:
-
+```
 nombre: ....
 placa: ....
 entidad: ...
-
+```
 ### Using DOCX Input
 
 Upload a .docx file using the input_file field in the POST request with the following format:
-
+```
 nombre: ....
 placa: ....
 entidad: ...
+```
 
 ## Dependencies
 
