@@ -1,6 +1,6 @@
 # Document Generation API
 
-The Document Generation API is a tool designed to generate text documents in different formats based on provided data inputs. It's a flexible solution that allows users to generate documents using both plain text input and existing DOCX files.
+The Document Generation API is a tool designed to generate text documents in different formats based on provided data inputs. It's a flexible solution that allows users to generate documents using both plain text input and existing TXT or DOCX files.
 
 ## Features
 
