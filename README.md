@@ -14,7 +14,7 @@ To use the Document Generation API locally, follow these steps:
 
 1. Clone the repository:
 ```
-git clone https://github.com/yourusername/document-generation-api.git
+git clone https://github.com/juanka023/document_generador_api.git
 ```
 
 2. Navigate to the project directory:
